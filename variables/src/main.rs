@@ -22,4 +22,9 @@ fn main() {
     }
 
     println!("The value of y is: {y}");
+
+    // use-case of used shadowing variable --> can reuse same with same name
+    let space = "       ";
+    let space = space.len();
+    println!("The value of space is: {space}")
 }
