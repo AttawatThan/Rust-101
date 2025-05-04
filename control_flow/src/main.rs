@@ -29,4 +29,29 @@ fn main() {
     println!("The value of number is: {number}");
 
 
+    //Repetition with Loops
+
+    // 1. loop
+    // loop with break
+    let mut counter = 0;
+    loop {
+        println!("again !");
+        counter += 1;
+        if counter == 10 {
+            break;
+        }
+    }
+    
+    // loop with return value
+    let mut counter = 0;
+    let result = loop {
+        counter += 1;
+
+        if counter == 10 {
+            break counter * 2;
+        }
+    };
+    
+
+    println!("The result is {result}");
 }
