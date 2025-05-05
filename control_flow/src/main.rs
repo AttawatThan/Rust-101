@@ -55,23 +55,28 @@ fn main() {
     println!();
 
     // loop labels to Disambiguate between multiple loops
-    let mut count = 0;
-    loop {
+    let mut count: i32 = 0;
+    'counting_up: loop {
         println!("count = {count}");
         let mut remaining = 10;
         loop {
             println!("remaining = {remaining}");
+
+            // All condition innermost loop
+            
+            // inner loop condition to exit
             if remaining == 9 {
                 break;
             }
+            
+            // outer loop condition to exit (name loop labeled 'counting_up)
+            if count == 2 {
+                break 'counting_up;
+            }
             remaining -= 1;
-        }
-        if count == 2 {
-            break;
         }
         count += 1;
     }
     println!("End count = {count}");
-
     
 }
