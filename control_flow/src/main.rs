@@ -51,7 +51,27 @@ fn main() {
             break counter * 2;
         }
     };
-    
-
     println!("The result is {result}");
+    println!();
+
+    // loop labels to Disambiguate between multiple loops
+    let mut count = 0;
+    loop {
+        println!("count = {count}");
+        let mut remaining = 10;
+        loop {
+            println!("remaining = {remaining}");
+            if remaining == 9 {
+                break;
+            }
+            remaining -= 1;
+        }
+        if count == 2 {
+            break;
+        }
+        count += 1;
+    }
+    println!("End count = {count}");
+
+    
 }
