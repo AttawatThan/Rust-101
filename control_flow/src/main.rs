@@ -78,5 +78,40 @@ fn main() {
         count += 1;
     }
     println!("End count = {count}");
+    println!();
+
+    // 2. Loops with while
+    let mut number = 3;
+    while number != 0 {
+        println!("number: {number}");
+
+        number -= 1;
+    }
+    println!("LIFTOFF!!!");
+    println!();
     
+    // 3. Loops with for
+    // loop over the elemnents of a collection, such as an array
+    // - can also use while construct to loop
+    let a: [u8; 5] = [10, 20, 30, 40, 50];
+    let mut index = 0;
+    while index < 5 {
+        println!("the value is: {}", a[index]);
+
+        index += 1;
+    }
+    println!();
+
+    // - can use a for loop
+    for element in a {
+        println!("the value is: {element}");
+    }
+    println!();
+
+    for number in (1..4).rev() {
+        println!("number: {number}");
+    }
+    println!("LIFTOFF!!!");
+
+
 }
